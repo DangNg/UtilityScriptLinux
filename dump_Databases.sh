@@ -8,6 +8,6 @@ do
          database=`cat $i | grep DB_NAME |  awk -F "'" '{ print $4}' `
          password=`cat $i | grep DB_PASSWORD |  awk -F "'" '{ print $4}' `
          echo $user $password $database
-		 sql_file="$database.sql"
-		 `/usr/bin/mysqldump --otp -u $user -p$password $database > /root/databases/$sql_file`
+	 sql_file="$database.sql"
+	 `/usr/bin/mysqldump --otp -u $user -p$password $database > /root/databases/$sql_file`
 done
