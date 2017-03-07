@@ -11,7 +11,7 @@ do
 	username=`echo $line | awk '{print $2}'`
 	password=`echo $line | awk '{print $3}'`
 	database=`echo $line | awk '{print $4}'`
-  echo "Creating databases: $database Username: $username Password: $password"
+  	echo "Creating databases: $database Username: $username Password: $password"
 	`/usr/bin/mysql -u root -p$passwordMySQL -e "create database ${database}; "`
 	`/usr/bin/mysql -u root -p$passwordMySQL -e "create user ${username}@'localhost' identified by '${password}';"`
 	`/usr/bin/mysql -u root -p$passwordMySQL -e "grant all privileges on ${database}.* to ${username}@'%';"`
