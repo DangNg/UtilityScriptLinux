@@ -8,6 +8,6 @@ do
          database=`cat $i | grep DB_NAME |  awk -F "'" '{ print $4}' `
          password=`cat $i | grep DB_PASSWORD |  awk -F "'" '{ print $4}' `
          echo $user $password $database
-		     sql_file="$database.sql"
-		     `/usr/bin/mysql -u $user -p$password $database < /root/database/$sql_file`
+         sql_file="$database.sql"
+	 `/usr/bin/mysql -u $user -p$password $database < /root/database/$sql_file`
 done
