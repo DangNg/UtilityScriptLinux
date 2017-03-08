@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in `ls /home/*/wp-config.php`
+for i in `ls /home/*/public_html/wp-config.php`
 do
          domain=`echo $i | awk -F "/" '{ print $3}'`
          echo "Domain: $domain"
