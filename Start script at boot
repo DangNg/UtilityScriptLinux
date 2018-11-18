@@ -1,0 +1,4 @@
+- Method 1:
+  insert your script in file /etc/rc.local
+  chmod 755 /etc/rc.local
+  restart service rc.local
