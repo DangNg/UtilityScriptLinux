@@ -2,3 +2,7 @@
   insert your script in file /etc/rc.local
   chmod 755 /etc/rc.local
   restart service rc.local
+
+- Method 2:
+  use crontab -e
+  insert line: @reboot /path/to/executable_file
