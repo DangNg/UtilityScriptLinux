@@ -2,7 +2,7 @@
 
 REST=`timeout 15 telnet  14.232.166.121 2020 | grep Connected`
 echo "resuel is $REST"
-if [ "$REST" == "Connected" ]
+if [ "${#REST}" -ge 4 ]
 then
         echo "Connection is available"
 else
