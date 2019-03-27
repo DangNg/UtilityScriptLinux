@@ -7,7 +7,7 @@ do
                         echo   1
         else
                 echo `date` >> /var/log/death_log.log
-                `systemctl restart supervisor`
+                `do anything`
         fi
         sleep 10
 done
